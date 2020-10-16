@@ -9,9 +9,8 @@ router.get('/',async function(request,response){
 
 
 router.post('/add',async function(request,response){
-    const {id, name,description, pagecount,date, author }= request.body;
+    const { name,description, pagecount,date, author }= request.body;
     let book = new Book({
-        id:id,
         name:name,
         description:description,
         pagecount:pagecount,
