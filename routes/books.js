@@ -45,4 +45,15 @@ router.post('/delete',function(request,response){
         return response.status(501).json({message:err.message})
     })
 })
+router.get('/authors',async function(request,response){
+    let obj =[
+        {name:'Shive Khera'},
+        {name:'arper Lee'},
+        {name:'Leo Tolstoy'},
+        {name: 'F. Scott Fitzgeralds'},
+        {name:'Gabriel García Márquez'} ,
+        {name: 'E.M. Forster'}
+    ]
+    return response.status(200).json(obj)
+})
 module.exports=router
